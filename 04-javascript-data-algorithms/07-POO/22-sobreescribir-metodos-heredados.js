@@ -1,17 +1,14 @@
 function Bird() {}
 
-Bird.prototype.fly = function () {
-  return "I am flying!";
-};
+Bird.prototype.fly = () => "I am flying!";
 
 function Penguin() {}
 Penguin.prototype = Object.create(Bird.prototype);
 Penguin.prototype.constructor = Penguin;
 
 // Cambia solo el código debajo de esta línea
-Penguin.prototype.fly = function () {
-  return "Alas, this is a flightless bird.";
-};
+Penguin.prototype.fly = () => "Alas, this is a flightless bird.";
+
 // Cambia solo el código encima de esta línea
 
 const penguin = new Penguin();
