@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reproductor Multimedia</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        padding: 20px;
+        color: #333;
+      }
+
+      h1 {
+        text-align: center;
+        color: white;
+        font-size: 2.5em;
+        margin-bottom: 40px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        letter-spacing: 2px;
+      }
+
+      section {
+        background: white;
+        border-radius: 15px;
+        padding: 30px;
+        margin-bottom: 30px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+        transition: transform 0.3s ease;
+      }
+
+      section:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+      }
+
+      h2 {
+        color: #667eea;
+        font-size: 1.8em;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 3px solid #667eea;
+      }
+
+      video {
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      audio {
+        width: 100%;
+        margin-top: 10px;
+        border-radius: 10px;
+      }
+
+      @media (max-width: 700px) {
+        h1 {
+          font-size: 1.8em;
+        }
+
+        h2 {
+          font-size: 1.4em;
+        }
+
+        section {
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Centro Multimedia</h1>
+
+    <section>
+      <h2>Tutorial: ¿Qué es el Método Map y Cómo Funciona?</h2>
+      <video controls width="640">
+        <source
+          src="https://cdn.freecodecamp.org/curriculum/labs/what-is-the-map-method-and-how-does-it-work.mp4"
+          type="video/mp4"
+        />
+        Tu navegador no soporta el elemento de video.
+      </video>
+    </section>
+
+    <section>
+      <h2>Navegando Hacia el Horizonte</h2>
+      <audio
+        controls
+        loop
+        src="https://cdn.freecodecamp.org/curriculum/js-music-player/sailing-away.mp3"
+      >
+        Tu navegador no soporta el elemento de audio.
+      </audio>
+    </section>
+  </body>
+</html>
