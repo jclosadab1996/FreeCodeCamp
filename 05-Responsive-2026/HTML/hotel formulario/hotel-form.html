@@ -23,8 +23,25 @@
             name="name"
             placeholder="e.g., John Doe"
             required
+            size="20"
           />
+
           <label for="email">Email address (required):</label>
+          <input
+            placeholder="example@email.com"
+            required
+            id="email"
+            type="email"
+            name="email"
+            size="20"
+          />
+          <label for="age">Age (optional):</label>
+          <input type="number" name="age" id="age" min="3" max="100" />
+        </fieldset>
+        <fieldset>
+          <legend>Was this your first time at our hotel?</legend>
+          <input id="yes-option" type="radio" name="hotel-stay" />
+          <label for="yes-option">Yes</label>
         </fieldset>
       </form>
     </main>
