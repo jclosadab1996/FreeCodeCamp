@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Catalog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #f8fafc;
+      }
+      /* Sutiles sombras personalizadas para la tabla */
+      .table-shadow {
+        box-shadow:
+          0 10px 25px -5px rgba(0, 0, 0, 0.1),
+          0 8px 10px -6px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body class="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-5xl mx-auto">
+      <header class="mb-10 text-center">
+        <h1 class="text-4xl font-extrabold text-slate-800 tracking-tight mb-2">
+          Personal Book Library
+        </h1>
+        <p class="text-slate-600">
+          A curated collection of literary masterpieces and timeless classics.
+        </p>
+      </header>
+
+      <div class="overflow-hidden bg-white rounded-xl table-shadow">
+        <table class="min-w-full divide-y divide-slate-200">
+          <thead class="bg-slate-800 text-white">
+            <tr>
+              <th
+                class="px-6 py-4 text-left text-sm font-semibold uppercase tracking-wider"
+              >
+                Title
+              </th>
+              <th
+                class="px-6 py-4 text-left text-sm font-semibold uppercase tracking-wider"
+              >
+                Author
+              </th>
+              <th
+                class="px-6 py-4 text-left text-sm font-semibold uppercase tracking-wider"
+              >
+                Genre
+              </th>
+              <th
+                class="px-6 py-4 text-left text-sm font-semibold uppercase tracking-wider"
+              >
+                Publication Year
+              </th>
+            </tr>
+          </thead>
+
+          <tbody class="bg-white divide-y divide-slate-100">
+            <tr class="hover:bg-slate-50 transition-colors">
+              <td
+                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-slate-900"
+              >
+                One Hundred Years of Solitude
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-600">
+                Gabriel García Márquez
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-600">
+                Magical Realism
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-600">
+                1967
+              </td>
+            </tr>
+            <tr class="hover:bg-slate-50 transition-colors">
+              <td
+                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-slate-900"
+              >
+                1984
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-600">
+                George Orwell
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-600">
+                Dystopian
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-600">
+                1949
+              </td>
+            </tr>
+            <tr class="hover:bg-slate-50 transition-colors">
+              <td
+                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-slate-900"
+              >
+                The Hobbit
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-600">
+                J.R.R. Tolkien
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-600">
+                Fantasy
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-600">
+                1937
+              </td>
+            </tr>
+            <tr class="hover:bg-slate-50 transition-colors">
+              <td
+                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-slate-900"
+              >
+                Pride and Prejudice
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-600">
+                Jane Austen
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-600">
+                Classic Romance
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-600">
+                1813
+              </td>
+            </tr>
+            <tr class="hover:bg-slate-50 transition-colors">
+              <td
+                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-slate-900"
+              >
+                The Great Gatsby
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-600">
+                F. Scott Fitzgerald
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-600">
+                Tragedy
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-600">
+                1925
+              </td>
+            </tr>
+            <tr class="hover:bg-slate-50 transition-colors">
+              <td
+                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-slate-900"
+              >
+                Don Quixote
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-600">
+                Miguel de Cervantes
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-600">
+                Adventure
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-600">
+                1605
+              </td>
+            </tr>
+          </tbody>
+
+          <tfoot class="bg-slate-50">
+            <tr>
+              <td
+                colspan="4"
+                class="px-6 py-4 text-right text-sm font-bold text-slate-800 uppercase tracking-wide"
+              >
+                Total Books: 6
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+
+      <footer class="mt-8 text-center text-slate-400 text-xs">
+        <p>&copy; 2024 Digital Book Catalog Project</p>
+      </footer>
+    </div>
+  </body>
+</html>
