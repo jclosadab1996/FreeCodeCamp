@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey Form - Developer Community</title>
+    <style>
+      :root {
+        --color-bg: #0f172a;
+        --color-form-bg: #1e293b;
+        --color-text: #f8fafc;
+        --color-text-muted: #94a3b8;
+        --color-accent: #38bdf8;
+        --color-accent-hover: #0ea5e9;
+        --color-input-bg: #0f172a;
+        --color-border: #334155;
+      }
+
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: var(--color-bg);
+        color: var(--color-text);
+        margin: 0;
+        padding: 40px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 600px;
+      }
+
+      header {
+        text-align: center;
+        margin-bottom: 32px;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        margin: 0 0 8px 0;
+        color: var(--color-text);
+        font-weight: 700;
+        letter-spacing: -0.05em;
+      }
+
+      p {
+        font-size: 1.05rem;
+        color: var(--color-text-muted);
+        margin: 0;
+      }
+
+      form {
+        background-color: var(--color-form-bg);
+        padding: 40px;
+        border-radius: 16px;
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+        border: 1px solid var(--color-border);
+      }
+
+      .form-group {
+        margin-bottom: 24px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .form-group-row {
+        margin-bottom: 24px;
+      }
+
+      .form-group-row p {
+        color: var(--color-text);
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 12px;
+      }
+
+      label {
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 8px;
+        color: var(--color-text);
+      }
+
+      .label-inline {
+        display: flex;
+        align-items: center;
+        font-weight: 400;
+        margin-bottom: 10px;
+        cursor: pointer;
+        color: var(--color-text-muted);
+      }
+
+      .label-inline:hover {
+        color: var(--color-text);
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="number"],
+      select,
+      textarea {
+        background-color: var(--color-input-bg);
+        border: 1px solid var(--color-border);
+        border-radius: 8px;
+        color: var(--color-text);
+        padding: 12px 16px;
+        font-size: 1rem;
+        font-family: inherit;
+        transition: border-color 0.2s, box-shadow 0.2s;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      input[type="text"]:focus,
+      input[type="email"]:focus,
+      input[type="number"]:focus,
+      select:focus,
+      textarea:focus {
+        outline: none;
+        border-color: var(--color-accent);
+        box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+      }
+
+      input[type="radio"],
+      input[type="checkbox"] {
+        margin-right: 12px;
+        width: 18px;
+        height: 18px;
+        accent-color: var(--color-accent);
+        cursor: pointer;
+      }
+
+      textarea {
+        resize: vertical;
+        min-height: 120px;
+      }
+
+      button[type="submit"] {
+        background-color: var(--color-accent);
+        color: #0f172a;
+        border: none;
+        border-radius: 8px;
+        padding: 14px 24px;
+        font-size: 1.1rem;
+        font-weight: 700;
+        width: 100%;
+        cursor: pointer;
+        transition: background-color 0.2s, transform 0.1s;
+        margin-top: 8px;
+      }
+
+      button[type="submit"]:hover {
+        background-color: var(--color-accent-hover);
+      }
+
+      button[type="submit"]:active {
+        transform: scale(0.98);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <h1 id="title">Encuesta de Comunidad Tech</h1>
+        <p id="description">Cuéntanos sobre tu experiencia y ayúdanos a mejorar la plataforma.</p>
+      </header>
+
+      <form id="survey-form">
+        <!-- Nombre -->
+        <div class="form-group">
+          <label id="name-label" for="name">Nombre completo</label>
+          <input
+            id="name"
+            type="text"
+            placeholder="Ej. Juan Pérez"
+            required
+          />
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+          <label id="email-label" for="email">Correo electrónico</label>
+          <input
+            id="email"
+            type="email"
+            placeholder="juan@ejemplo.com"
+            required
+          />
+        </div>
+
+        <!-- Número (Edad) -->
+        <div class="form-group">
+          <label id="number-label" for="number">Edad (años)</label>
+          <input
+            id="number"
+            type="number"
+            min="12"
+            max="120"
+            placeholder="Introduce tu edad"
+          />
+        </div>
+
+        <!-- Desplegable -->
+        <div class="form-group">
+          <label id="dropdown-label" for="dropdown">¿Cuál es tu rol principal?</label>
+          <select id="dropdown" required>
+            <option value="" disabled selected>Selecciona una opción</option>
+            <option value="frontend">Desarrollador Frontend</option>
+            <option value="backend">Desarrollador Backend</option>
+            <option value="fullstack">Desarrollador Full Stack</option>
+            <option value="student">Estudiante / Autodidacta</option>
+          </select>
+        </div>
+
+        <!-- Botones de Radio -->
+        <div class="form-group-row">
+          <p>¿Recomendarías esta comunidad a un amigo?</p>
+          <label class="label-inline">
+            <input type="radio" name="recommend" value="definitely" checked /> Definitivamente
+          </label>
+          <label class="label-inline">
+            <input type="radio" name="recommend" value="maybe" /> Tal vez
+          </label>
+          <label class="label-inline">
+            <input type="radio" name="recommend" value="not-sure" /> No estoy seguro
+          </label>
+        </div>
+
+        <!-- Casillas de Verificación -->
+        <div class="form-group-row">
+          <p>¿Qué te gustaría ver en el futuro? <span style="font-weight: 400; color: var(--color-text-muted);">(Selecciona varias opciones)</span></p>
+          <label class="label-inline">
+            <input type="checkbox" name="prefer" value="projects" /> Proyectos prácticos de código abierto
+          </label>
+          <label class="label-inline">
+            <input type="checkbox" name="prefer" value="forums" /> Foros de discusión moderados
+          </label>
+          <label class="label-inline">
+            <input type="checkbox" name="prefer" value="challenges" /> Desafíos de programación semanales
+          </label>
+          <label class="label-inline">
+            <input type="checkbox" name="prefer" value="meetups" /> Eventos y conferencias virtuales
+          </label>
+        </div>
+
+        <!-- Textarea -->
+        <div class="form-group">
+          <label for="comments">¿Tienes algún comentario o sugerencia adicional?</label>
+          <textarea
+            id="comments"
+            name="comment"
+            placeholder="Escribe tus sugerencias aquí..."
+          ></textarea>
+        </div>
+
+        <!-- Botón Submit -->
+        <div class="form-group">
+          <button id="submit" type="submit">Enviar Encuesta</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
